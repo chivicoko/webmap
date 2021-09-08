@@ -25,7 +25,7 @@ def color_producer(elevation):
     elif 1500 <= elevation < 2500:
         return "orange"
     else:
-        return "grey"
+        return "red"
 
 # for lt, ln, el in zip(lat, lon, elev):
 #     fg.add_child(folium.Marker(location=[lt, ln], popup=str(el)+"m", icon=folium.Icon(color=color_producer(el))))
