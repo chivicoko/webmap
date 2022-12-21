@@ -5,13 +5,13 @@ import pandas as pd
 
 map = folium.Map(location=[38.58, -99.09], zoom_start=6, tiles='cartodb dark_matter')
 
-# map.add_child(folium.Marker(location=[38.2, -99.1], popup="I am a Marker", icon=folium.Icon(color="green")))
+# map.add_child(folium.Marker(location=[38.2, -99.1], popup="I am just a Marker", icon=folium.Icon(color="green")))
 
 fgv = folium.FeatureGroup(name="Volcanoes")
 
 # features = [[38.2, -99.1], [39.2, -97.1]]
 # for feature in features:
-#     fg.add_child(folium.Marker(location=feature, popup="I am a Marker", icon=folium.Icon(color="green")))
+#     fg.add_child(folium.Marker(location=feature, popup="I am a just Marker", icon=folium.Icon(color="green")))
 
 # adding coordinates from a textfile('volcanoes_usa.txt' in this case)
 data = pd.read_csv("Volcanoes_USA.csv")
@@ -45,5 +45,4 @@ map.add_child(fgv)
 map.add_child(fgp)
 
 map.add_child(folium.LayerControl())
-
 map.save("Map1.html")
